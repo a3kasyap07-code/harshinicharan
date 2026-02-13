@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love Story 💖</title>
+
+<style>
+body {
+  margin:0;
+  font-family: "Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji", Georgia, serif;
+  background: linear-gradient(to bottom, #ffd6e8, #ffc0cb);
+  text-align:center;
+  overflow-x:hidden;
+  color:#b30059;
+}
+
+/* Floating CSS Hearts */
+.heart {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: #ff4da6;
+  transform: rotate(45deg);
+  animation: floatUp 6s linear forwards;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff4da6;
+  border-radius: 50%;
+}
+.heart::before { top: -7px; left: 0; }
+.heart::after { left: -7px; top: 0; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(45deg); opacity:1; }
+  100% { transform: translateY(-110vh) rotate(45deg); opacity:0; }
+}
+
+.hero {
+  height:100vh;
+  background:url('https://files.catbox.moe/252l1o.jpeg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+/* UPDATED TITLE STYLE — NO WHITE BACKGROUND */
+h1 {
+  font-size:34px;
+  color: white;
+  text-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.9),
+    0 0 20px rgba(255, 105, 180, 0.7),
+    0 0 30px rgba(255, 105, 180, 0.5);
+  padding: 0 20px;
+}
+
+.section {
+  padding:60px 20px;
+}
+
+.memory {
+  margin-bottom:50px;
+}
+
+.memory img,
+.memory video {
+  width:90%;
+  max-width:500px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(255,105,180,0.4);
+}
+
+.final {
+  font-size:26px;
+  padding:60px 20px;
+  background:#ffe6f2;
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUTOPLAY MUSIC -->
+<audio id="bgMusic" autoplay loop muted preload="auto">
+  <source src="https://files.catbox.moe/rlmjmd.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+music.volume = 0.6;
+
+music.play().catch(() => {
+  document.addEventListener("click", () => {
+    music.muted = false;
+    music.play();
+  }, { once: true });
+});
+
+setTimeout(() => {
+  music.muted = false;
+}, 1000);
+
+// Floating hearts
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "-20px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 400);
+</script>
+
+<div class="hero">
+<h1>Hey My Love 💕<br>Our Love Story — The One I’ll Always Choose 💖</h1>
+</div>
+
+<div class="section">
+
+<!-- PHOTOS -->
+
+<div class="memory"><h2>You are my today, my tomorrow, and my forever. 💞</h2><img src="https://files.catbox.moe/252l1o.jpeg"></div>
+<div class="memory"><h2>Loving you is my favorite thing in the world. 💕</h2><img src="https://files.catbox.moe/jlyeyv.jpeg"></div>
+<div class="memory"><h2>Every love story is beautiful, but ours is my favorite. 🥰</h2><img src="https://files.catbox.moe/m6pgr6.jpeg"></div>
+<div class="memory"><h2>You are the reason my heart smiles. 🌸</h2><img src="https://files.catbox.moe/6m0r0h.jpeg"></div>
+<div class="memory"><h2>With you, every day feels like Valentine’s Day 💖</h2><img src="https://files.catbox.moe/j0vlzt.jpeg"></div>
+<div class="memory"><h2>Distance means nothing when someone means everything. 💞</h2><img src="https://files.catbox.moe/nnyegn.jpeg"></div>
+<div class="memory"><h2>You are my once-in-a-lifetime kind of love. 💕</h2><img src="https://files.catbox.moe/zvsae2.jpeg"></div>
+<div class="memory"><h2>I didn’t choose you — my heart did. 🥰</h2><img src="https://files.catbox.moe/0k5f0u.jpeg"></div>
+<div class="memory"><h2>You make my world softer and brighter. 🌷</h2><img src="https://files.catbox.moe/tbom3b.jpeg"></div>
+<div class="memory"><h2>Forever sounds perfect when it’s with you. 💗</h2><img src="https://files.catbox.moe/q3c0cf.jpeg"></div>
+
+<!-- VIDEOS -->
+
+<div class="memory"><h2>Our Sweet Moment 🎥💖</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/us6urt.mp4" type="video/mp4">
+</video></div>
+
+<div class="memory"><h2>Forever Us 🎬💕</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/upcsau.mp4" type="video/mp4">
+</video></div>
+
+<div class="memory"><h2>My Favorite Clip 💘</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/hyz806.mp4" type="video/mp4">
+</video></div>
+
+<div class="memory"><h2>Cutest Ever 🥰🎥</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/hg7pgn.mp4" type="video/mp4">
+</video></div>
+
+<div class="memory"><h2>Always You 💗🎬</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/zgty48.mp4" type="video/mp4">
+</video></div>
+
+<div class="memory"><h2>Endless Love 💞🎥</h2>
+<video autoplay loop muted playsinline controls preload="auto">
+<source src="https://files.catbox.moe/einfb5.mp4" type="video/mp4">
+</video></div>
+
+</div>
+
+<div class="final">
+Distance means nothing when someone means everything 💖✨  
+I cannot wait to make a thousand more memories with you 💕
+</div>
+
+</body>
+</html>
